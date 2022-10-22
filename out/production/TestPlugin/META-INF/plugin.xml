@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>com.your.company.unique.plugin.id</id>
+    <name>TestPlugin</name>
+    <version>1.0</version>
+    <vendor email="support@ccc.com" url="http://www.cccc.com">CCCC</vendor>
+
+    <description><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]]></description>
+
+    <change-notes><![CDATA[aaaaaaaaaaaaaaaa]]></change-notes>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+    <idea-version since-build="211"/>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <notificationGroup displayType="BALLOON" id="AllNotification"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="TestMenu" class="io.github.TestAction" text="TestMenu" description="TestMenu">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+
+        <group id="FirstMenu" text="一级菜单">
+            <action class="io.github.TestAction" text="测试菜单"/>
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+    </actions>
+
+</idea-plugin>
